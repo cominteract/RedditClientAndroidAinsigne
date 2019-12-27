@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.redditpreview.RedditPreviewFragment">
+    <TextView
+            android:textColor="@color/white"
+            android:id="@+id/tv_reddit_preview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_feed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+            android:layout_margin="@dimen/padding_feed"
+            android:textColor="@color/white"
+            android:id="@+id/tv_reddit_preview_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tv_reddit_preview_name"
+            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+            android:layout_margin="@dimen/padding_feed"
+            android:textColor="@color/white"
+            android:id="@+id/tv_reddit_preview_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tv_reddit_preview_user_name"
+            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reddit_preview_name"
+            android:id="@+id/tv_reddit_preview_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <ImageView
+            android:id="@+id/iv_preview_image"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reddit_preview_desc"
+            app:layout_constraintBottom_toTopOf="@id/iv_preview_share"
+            android:layout_margin="@dimen/padding_feed"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    <View
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+    <ImageView
+            android:layout_margin="@dimen/padding_feed"
+            android:background="@drawable/up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/iv_preview_upvote"
+             />
+    <TextView
+
+            android:layout_margin="@dimen/padding_feed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_preview_upvote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_preview_upvote" />
+    <ImageView
+            android:layout_margin="@dimen/padding_feed"
+            android:background="@drawable/down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_preview_upvote"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/iv_preview_downvote" />
+    <ImageView
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/comment"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="@dimen/padding_feed"
+            android:id="@+id/iv_preview_comment" />
+    <TextView
+
+            android:layout_margin="@dimen/padding_feed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_preview_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_preview_comment"/>
+    <ImageView
+            android:layout_margin="@dimen/padding_feed"
+            android:background="@drawable/reply"
+            app:layout_constraintRight_toLeftOf="@id/tv_preview_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/iv_preview_share" />
+    <TextView
+
+            android:layout_margin="@dimen/padding_feed"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_preview_share"/>
+
+</android.support.constraint.ConstraintLayout>

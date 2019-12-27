@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             tools:context=".ui.redditfeed.RedditFeedFragment">
+    <android.support.design.widget.TabLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_inbox"
+            app:tabIndicatorColor="@color/tabIndicatorColor"
+            android:background="@color/mcam_color_light"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+    <android.support.v4.view.ViewPager
+            android:layout_marginTop="42dp"
+            app:layout_constraintTop_toBottomOf="@id/tab_inbox"
+            android:id="@+id/pager_inbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+</android.support.constraint.ConstraintLayout>

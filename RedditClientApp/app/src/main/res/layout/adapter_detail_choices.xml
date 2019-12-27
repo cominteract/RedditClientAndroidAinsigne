@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:weightSum="1"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content">
+    <Button android:layout_width="0dp" android:layout_height="wrap_content" android:background="@color/transparent"
+            android:text="POSTS" android:layout_weight=".49" android:id="@+id/btn_choices_post"/>
+    <Button android:layout_width="0dp" android:layout_height="wrap_content" android:background="@color/transparent"
+            android:text="MENU" android:layout_weight=".49" android:id="@+id/btn_choices_menu"/>
+
+</LinearLayout>

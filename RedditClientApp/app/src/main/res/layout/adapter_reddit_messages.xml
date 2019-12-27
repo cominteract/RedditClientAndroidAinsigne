@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:id="@+id/tv_reddit_msgs_username" android:layout_margin="@dimen/padding_feed"
+               app:layout_constraintLeft_toLeftOf="parent" android:text="Username"
+               app:layout_constraintTop_toTopOf="parent"/>
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:id="@+id/tv_msgs_timestamp" android:layout_margin="@dimen/padding_feed" android:text="Timestamp"
+               app:layout_constraintLeft_toRightOf="@id/tv_reddit_msgs_username"
+               app:layout_constraintTop_toTopOf="parent"/>
+    <TextView  android:layout_width="match_parent" android:layout_height="wrap_content"
+               android:id="@+id/tv_msgs_title" android:layout_margin="@dimen/padding_feed"
+               app:layout_constraintLeft_toLeftOf="parent" android:text="Title"
+               app:layout_constraintTop_toBottomOf="@id/tv_reddit_msgs_username"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/tv_msgs_body" android:text="Body" android:layout_margin="@dimen/padding_feed"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/tv_msgs_timestamp"/>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

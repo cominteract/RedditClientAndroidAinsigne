@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_gravity="center"
+                                             android:layout_width="340dp"
+                                             android:layout_height="wrap_content"
+                                             android:padding="@dimen/padding_feed"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             tools:context=".ui.redditabout.RedditAboutFragment">
+
+    <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/iv_reddit_user_pic"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+    />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_reddit_user_name" android:layout_margin="@dimen/padding_feed" android:text="Username should be"
+        app:layout_constraintBottom_toBottomOf="@id/iv_reddit_user_pic" app:layout_constraintLeft_toRightOf="@id/iv_reddit_user_pic" android:textSize="24sp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_reddit_user_online" android:layout_margin="@dimen/padding_feed"
+              app:layout_constraintBottom_toBottomOf="@id/iv_reddit_user_pic" app:layout_constraintLeft_toRightOf="@id/tv_reddit_user_name" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_reddit_user_postkarma" app:layout_constraintTop_toBottomOf="@id/iv_reddit_user_pic" android:layout_margin="@dimen/padding_feed" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tv_reddit_user_commentkarma" app:layout_constraintTop_toBottomOf="@id/iv_reddit_user_pic" android:layout_margin="@dimen/padding_feed" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" android:layout_margin="@dimen/padding_feed"
+              android:id="@+id/tv_reddit_user_postkarmalabel" app:layout_constraintTop_toBottomOf="@id/tv_reddit_user_postkarma" android:text="Post karma"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintRight_toRightOf="parent" android:layout_margin="@dimen/padding_feed"
+              android:id="@+id/tv_reddit_user_commentkarmalabel" app:layout_constraintTop_toBottomOf="@id/tv_reddit_user_commentkarma" android:text="Comment karma"/>
+    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:id="@+id/iv_reddit_user_block" android:background="@drawable/block" android:layout_margin="@dimen/padding_feed"
+                app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_reddit_user_commentkarmalabel" />
+    <TextView android:layout_width="wrap_content" android:layout_height="32dp" android:id="@+id/tv_reddit_user_block" android:text="Block user" android:gravity="center"
+               app:layout_constraintLeft_toRightOf="@id/iv_reddit_user_block" app:layout_constraintTop_toBottomOf="@id/tv_reddit_user_commentkarmalabel" android:layout_margin="@dimen/padding_feed"/>
+    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:id="@+id/iv_reddit_user_viewprofile" android:background="@drawable/profileview" android:layout_margin="@dimen/padding_feed"
+               app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_reddit_user_block" />
+    <TextView android:layout_width="wrap_content" android:layout_height="32dp" android:id="@+id/tv_reddit_user_viewprofile" android:text="View profile" android:gravity="center"
+               app:layout_constraintLeft_toRightOf="@id/iv_reddit_user_viewprofile" app:layout_constraintTop_toBottomOf="@id/iv_reddit_user_block" android:layout_margin="@dimen/padding_feed"/>
+    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:id="@+id/iv_reddit_user_startchat"  android:background="@drawable/comment" android:layout_margin="@dimen/padding_feed"
+               app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_reddit_user_viewprofile"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="32dp" android:id="@+id/tv_reddit_user_startchat" android:text="Start Chat" android:gravity="center"
+               app:layout_constraintLeft_toRightOf="@id/iv_reddit_user_startchat" app:layout_constraintTop_toBottomOf="@id/iv_reddit_user_viewprofile" android:layout_margin="@dimen/padding_feed" />
+</android.support.constraint.ConstraintLayout>

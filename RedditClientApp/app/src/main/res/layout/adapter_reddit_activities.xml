@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_margin="@dimen/activity_horizontal_margin"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="32dp" android:layout_height="32dp" app:layout_constraintLeft_toLeftOf="parent" android:layout_margin="@dimen/padding_feed"
+               app:layout_constraintTop_toTopOf="parent" android:id="@+id/iv_reddit_activity_icon" android:background="@drawable/redditpic"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_activity_community"
+              android:text="Reddit" android:layout_margin="@dimen/padding_feed"
+              app:layout_constraintLeft_toRightOf="@+id/iv_reddit_activity_icon" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_activity_msg" android:text="Message"
+              android:layout_margin="@dimen/padding_feed"
+              app:layout_constraintTop_toBottomOf="@id/iv_reddit_activity_icon" app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@color/transparent" android:textColor="@color/black"
+            android:layout_margin="@dimen/padding_feed"
+            app:layout_constraintTop_toBottomOf="@id/tv_activity_msg" app:layout_constraintLeft_toLeftOf="parent" android:text="Send Reply" android:id="@+id/tv_activity_send_reply"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tv_activity_timestamp" android:text="Timestamp"
+              android:layout_margin="@dimen/padding_feed"
+            app:layout_constraintLeft_toRightOf="@id/tv_activity_send_reply" app:layout_constraintTop_toBottomOf="@id/tv_activity_msg"/>
+
+</android.support.constraint.ConstraintLayout>
