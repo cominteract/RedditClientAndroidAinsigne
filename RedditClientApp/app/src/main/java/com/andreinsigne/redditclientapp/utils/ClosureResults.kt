@@ -33,7 +33,6 @@ class ClosureResults {
                         (retrieved as ListingRetrieved).
                             didRetrievedListing(json.parse(FeedListing.serializer(), data), apiEndpoint)
                         } catch (ignored: JsonException) {
-                        Log.d("Error","Error $ignored")
                         retrieved.didRetrievedError(Error(""),false)
                     }
                 }

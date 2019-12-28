@@ -21,8 +21,8 @@ class Constants {
             "Sports", "TV","Tech", "Travel",
             "Video Games","Videos", "Vroom","Writing")
         val feed_bundle = "FeedBundle"
-        val fake_build = "Fake"
-        val reddit_build = "Reddit"
+        val fake_build = "fake"
+        val reddit_build = "reddit"
         val tabChoices = arrayOf("News","Home","Hot")
         val subredditTabChoices = arrayOf("Posts","About","Hot")
         val msgChoices = arrayOf("Inbox","Activity")

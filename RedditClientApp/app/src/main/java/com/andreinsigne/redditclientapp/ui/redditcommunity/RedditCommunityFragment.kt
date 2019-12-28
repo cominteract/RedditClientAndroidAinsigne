@@ -64,6 +64,15 @@ class RedditCommunityFragment : BaseFragment(), RedditCommunityView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter?.startAPI()
+        val layoutManager = LinearLayoutManager(this.context)
+        layoutManager.orientation = RecyclerView.VERTICAL
+        doAsync { uiThread {
+            val adapter = FilterFeedAdapter(null, true)
+            adapter.view = it
+            rv_community.adapter = adapter
+            rv_community.layoutManager = layoutManager
+        }
+        }
     }
 
     override fun retrievedAllUpdateView(listing: FeedListing) {
@@ -114,6 +123,7 @@ class RedditCommunityFragment : BaseFragment(), RedditCommunityView {
     }
 
     override fun retrievedSubredditsUpdateView(listing: List<FeedChildrenListing>) {
+
         val layoutManager = LinearLayoutManager(this.context)
         layoutManager.orientation = RecyclerView.VERTICAL
         doAsync { uiThread {

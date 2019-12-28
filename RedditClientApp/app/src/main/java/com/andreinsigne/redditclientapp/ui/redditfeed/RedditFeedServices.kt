@@ -70,6 +70,7 @@ class RedditFeedServices(
 
             }
             override fun didRetrievedListing(feedListing: FeedListing, apiEndpoint: APIEndpoint) {
+
                 if (apiEndpoint == APIEndpoint.News){
                     contract?.retrievedNews(feedListing)
                 }
@@ -110,6 +111,11 @@ class RedditFeedServices(
                 }
             }
         }
+
+        apiManager.startAPI(APIEndpoint.Popular,  EndPoints.endpoint( APIEndpoint.Hot, null) ,  true,  retrieved)
+        apiManager.startAPI(APIEndpoint.News,  EndPoints.endpoint( APIEndpoint.Hot, null) ,  true,  retrieved)
+        apiManager.startAPI(APIEndpoint.Default, EndPoints.endpoint( APIEndpoint.Hot, null) ,  true, retrieved)
+        apiManager.startAPI(APIEndpoint.Trending, EndPoints.endpoint( APIEndpoint.Hot, null) ,  true,  retrieved)
         if (authManager.isLogged())
         {
             apiManager.startAPI(APIEndpoint.MineSubreddit, null ,  false, retrieved)
@@ -119,10 +125,6 @@ class RedditFeedServices(
             Config.updateRefreshed("Not")
             apiManager.startAPI(APIEndpoint.Home , EndPoints.endpoint( APIEndpoint.Best, null)  ,  true, retrieved)
         }
-        apiManager.startAPI(APIEndpoint.Popular,  EndPoints.endpoint( APIEndpoint.Hot, null) ,  true,  retrieved)
-        apiManager.startAPI(APIEndpoint.News,  EndPoints.endpoint( APIEndpoint.Hot, null) ,  true,  retrieved)
-        apiManager.startAPI(APIEndpoint.Default, EndPoints.endpoint( APIEndpoint.Hot, null) ,  true, retrieved)
-        apiManager.startAPI(APIEndpoint.Trending, EndPoints.endpoint( APIEndpoint.Hot, null) ,  true,  retrieved)
         if (authManager.isLogged())
         {
             val meretrieved = object : MeRetrieved

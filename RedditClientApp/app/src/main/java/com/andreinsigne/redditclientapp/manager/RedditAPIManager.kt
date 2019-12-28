@@ -67,7 +67,6 @@ class RedditAPIManager : APIManager() {
                 if (!paramToJson(input).isNullOrEmpty()){
                     //request?.httpBody = parameter.URLQuery.data(using: .utf8)
                     val param = paramToJson(input)?.URLQuery()
-                    Log.d(" My params "," My params $param")
                     postData = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                         param?.toByteArray(StandardCharsets.UTF_8)
                     } else {
@@ -104,13 +103,10 @@ class RedditAPIManager : APIManager() {
                 outputStream.write(postData)
                 outputStream.flush()
             }
-            if(connection.responseCode != HttpURLConnection.HTTP_OK)
-                Log.d(" No way "," No way ${connection.responseCode} $method $url ")
 
             var result = ""
             connection.inputStream.bufferedReader().use { reader ->
                 result = reader.readText()
-                Log.d(" Api Result ", " $result")
                 ClosureResults.apiResults(endPoint, result, retrieved)
             }
         }

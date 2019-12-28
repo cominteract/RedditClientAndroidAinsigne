@@ -34,7 +34,6 @@ class RedditCommunityServices(
     fun startListing() {
         val retrieved = object : ListingRetrieved1 {
             override fun didRetrievedError(error: Error, revoked: Boolean) {
-
             }
 
             override fun didRetrievedListing(feedListing: FeedListing, apiEndpoint: APIEndpoint) {

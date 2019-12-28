@@ -1,6 +1,7 @@
 package com.andreinsigne.redditclientapp.ui.redditfeed
 
 
+import android.util.Log
 import com.andreinsigne.redditclientapp.manager.APIManager
 import com.andreinsigne.redditclientapp.manager.AuthManager
 import com.andreinsigne.redditclientapp.model.FeedListing

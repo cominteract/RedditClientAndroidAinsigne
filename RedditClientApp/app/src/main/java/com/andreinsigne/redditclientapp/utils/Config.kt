@@ -323,8 +323,6 @@ class Config {
                     val outputStream = DataOutputStream(connection.outputStream)
                     outputStream.write(postData)
                     outputStream.flush()
-                    if(connection.responseCode != HttpURLConnection.HTTP_OK)
-                        Log.d(" No way "," No way ${connection.responseCode} $param ")
                     connection.inputStream.bufferedReader().use { reader ->
 
 

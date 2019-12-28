@@ -68,7 +68,6 @@ class MainActivity : MainView, BaseActivity() {
         else if(presenter != null && !ongoingRefresh && Config.getRefreshDate() != null
             && Config.getRefreshDate()!!.oneHourPassed())
         {
-            Log.d(" Hours from now ${Config.getRefreshDate()!!} "," Hours from now ${Config.getRefreshDate()!!.hoursFromNow()} ")
             ongoingRefresh = true
             presenter!!.refreshToken()
         }
@@ -77,9 +76,9 @@ class MainActivity : MainView, BaseActivity() {
             loadFragment(UINavigation.tabState(R.id.navigation_feed, true))
             navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
         }
-        else
-        {
-            Log.d(" It shouldnt be here "," It shouldnt be here ")
+        else{
+            loadFragment(UINavigation.tabState(R.id.navigation_feed, true))
+            navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
         }
     }
 

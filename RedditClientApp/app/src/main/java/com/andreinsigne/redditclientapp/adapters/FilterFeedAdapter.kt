@@ -23,7 +23,7 @@ import org.jetbrains.anko.uiThread
 import java.net.URL
 
 
-class FilterFeedAdapter(feedListing_: List<FeedChildrenListing>, isCommunity_ : Boolean) : RecyclerView.Adapter<FilterFeedAdapter.FeedDataHolder>()  {
+class FilterFeedAdapter(feedListing_: List<FeedChildrenListing>?, isCommunity_ : Boolean) : RecyclerView.Adapter<FilterFeedAdapter.FeedDataHolder>()  {
 
     val feedListing = feedListing_
     var isCommunity = isCommunity_
@@ -40,7 +40,7 @@ class FilterFeedAdapter(feedListing_: List<FeedChildrenListing>, isCommunity_ : 
         val children = feedListing
         if(children != null)
             return children.size + adjusted
-        return 0
+        return adjusted
     }
 
 
@@ -77,14 +77,13 @@ class FilterFeedAdapter(feedListing_: List<FeedChildrenListing>, isCommunity_ : 
     }
 
     override fun onBindViewHolder(holder: FeedDataHolder, position: Int) {
-        if(feedListing != null) {
 
             if(position < adjusted) {
                 holder.bind(position)
             }
             else {
-                holder.bind(feedListing!![position - adjusted])
+                if(feedListing != null && feedListing.size > (position - adjusted))
+                    holder.bind(feedListing[position - adjusted])
             }
-        }
     }
 }

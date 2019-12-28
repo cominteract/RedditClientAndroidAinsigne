@@ -93,9 +93,10 @@ class RedditFeedFragment : BaseFragment(), RedditFeedView {
     }
 
     override fun retrievedHomeUpdateView(listing: FeedListing) {
-        pagerAdapter!!.updateFeedListings(newsList)
-        pagerAdapter!!.updateFeedListings(listing)
-        pagerAdapter!!.updateFeedListings(homeList)
+
+        pagerAdapter?.updateFeedListings(newsList)
+        pagerAdapter?.updateFeedListings(listing)
+        pagerAdapter?.updateFeedListings(homeList)
         homeList = listing
         doAsync { uiThread {
             pagerAdapter?.notifyDataSetChanged()
@@ -176,7 +177,7 @@ class RedditFeedFragment : BaseFragment(), RedditFeedView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter?.startAPI()
+
         Log.d(" View Created "," View Created ")
         btn_feed_cancel.visibility = View.GONE
         edt_feed.setOnTouchListener(View.OnTouchListener { arg0, arg1 ->
@@ -256,10 +257,9 @@ class RedditFeedFragment : BaseFragment(), RedditFeedView {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         pagerAdapter = FeedPagerAdapter(childFragmentManager)
-
+        presenter?.startAPI()
         pager_feed.adapter = pagerAdapter
         tab_feed.setupWithViewPager(pager_feed)
-
 
     }
 
