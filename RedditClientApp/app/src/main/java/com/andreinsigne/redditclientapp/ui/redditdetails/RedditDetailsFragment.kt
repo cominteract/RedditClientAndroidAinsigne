@@ -48,7 +48,6 @@ class RedditDetailsFragment : BaseFragment(), RedditDetailsView {
     }
 
     override fun retrievedAboutSubredditUpdateView(subreddit: Subreddit, endPoint: APIEndpoint) {
-        Log.d(" AI Sub "," AI Sub ")
         doAsync {
             uiThread {
                 val layoutManager = LinearLayoutManager(it.context)

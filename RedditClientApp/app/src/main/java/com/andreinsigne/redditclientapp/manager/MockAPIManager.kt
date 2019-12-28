@@ -15,7 +15,6 @@ class MockAPIManager : APIManager() {
     val responses = Responses()
 
     override fun startAPI(endPoint: APIEndpoint, input: String?, isJson: Boolean, retrieved: ErrorRetrieved) {
-        Log.d(" I am here "," I am here $input")
         ClosureResults.apiResults(endPoint,responses.getResponsesFrom(endPoint),retrieved)
     }
     

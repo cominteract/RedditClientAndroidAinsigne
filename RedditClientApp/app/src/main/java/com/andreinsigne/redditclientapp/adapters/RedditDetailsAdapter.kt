@@ -55,7 +55,6 @@ class RedditDetailsAdapter(subreddit_: Subreddit) : RecyclerView.Adapter<RedditD
 
     override fun onCreateViewHolder(p0: ViewGroup,  viewType: Int): RedditDetailHolder {
         var inflatedView : View? = null
-        Log.d(" AI CreateView "," AI CreateView ")
         when (viewType) {
             headerView -> {
                 inflatedView = LayoutInflater.from(p0.context)

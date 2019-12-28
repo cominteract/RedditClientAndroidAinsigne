@@ -62,7 +62,6 @@ class RedditDetailsServices(
 
         val ruleretrieved = object : RulesRetrieved {
             override fun didRetrievedError(error: Error, revoked: Boolean) {
-                Log.d(" AI Error ", " AI Error ")
             }
 
             override fun didRetrieveRules(rules: Rules, apiEndpoint: APIEndpoint) {

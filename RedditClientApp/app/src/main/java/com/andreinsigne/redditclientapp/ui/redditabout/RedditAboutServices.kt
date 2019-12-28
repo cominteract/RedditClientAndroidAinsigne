@@ -36,11 +36,9 @@ class RedditAboutServices(
     {
         val meretrieved = object : MeRetrieved {
             override fun didRetrievedError(error: Error, revoked: Boolean) {
-                Log.d(" Level up "," Level up wrong")
             }
 
             override fun didRetrieveMe(me: Me) {
-                Log.d(" Level up "," Level up ")
                 contract?.retrievedMe(me)
             }
         }
